@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/.idea/
+/tax-helper-application/build/
+/tax-helper-application/build/classes/java/main/
+/tax-helper-domain-application/build/
+/tax-helper-domain-application/build/classes/java/main/
+/tax-helper-domain-core/build/
+/tax-helper-domain-core/build/classes/java/main/
+/tax-helper-domain-infrastructure/build/
+/tax-helper-domain-infrastructure/build/classes/java/main/
