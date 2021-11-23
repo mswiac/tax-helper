@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group = 'mateusz.swiac'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}

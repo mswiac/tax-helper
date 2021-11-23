@@ -1,0 +1,8 @@
+rootProject.name = 'tax-helper'
+
+include 'tax-helper-application'
+include 'tax-helper-domain'
+include 'tax-helper-domain-application'
+include 'tax-helper-domain-core'
+include 'tax-helper-domain-infrastructure'
+
