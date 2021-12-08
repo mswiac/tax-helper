@@ -1,10 +1,14 @@
 package tax.helper.domain.core.nbp.model;
 
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
 import java.time.LocalDate;
 
-import lombok.Data;
-
-@Data
+@Builder
+@Getter
+@EqualsAndHashCode
 public class Rate {
 
     private final String no;

@@ -1,6 +1,6 @@
 package tax.helper.domain.core.common.command;
 
-public interface Command<ReturnType> {
+public interface Command<T> {
 
-    ReturnType handle();
+    T handle();
 }

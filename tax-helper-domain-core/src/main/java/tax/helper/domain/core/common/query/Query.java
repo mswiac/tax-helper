@@ -1,6 +1,6 @@
 package tax.helper.domain.core.common.query;
 
-public interface Query<ReturnType> {
+public interface Query<T> {
 
-    ReturnType handle();
+    T handle();
 }

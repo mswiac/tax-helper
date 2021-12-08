@@ -1,25 +1,10 @@
-plugins {
-    id 'java'
-}
-
 group = 'mateusz.swiac'
 version = '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 dependencies {
     implementation project(':tax-helper-domain-core')
 
-    compileOnly 'org.projectlombok:lombok:1.18.22'
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
-
-test {
-    useJUnitPlatform()
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
 }

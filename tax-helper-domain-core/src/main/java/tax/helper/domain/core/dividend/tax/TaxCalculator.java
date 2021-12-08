@@ -1,15 +1,14 @@
 package tax.helper.domain.core.dividend.tax;
 
-import java.util.Optional;
-
 import org.apache.commons.math3.util.Precision;
-
 import tax.helper.domain.core.common.model.Currency;
 import tax.helper.domain.core.common.model.CurrencyAndAmount;
 import tax.helper.domain.core.dividend.model.Dividend;
 import tax.helper.domain.core.dividend.model.DividendWithTax;
 import tax.helper.domain.core.nbp.NbpClient;
 import tax.helper.domain.core.nbp.model.ExchangeRatesSeries;
+
+import java.util.Optional;
 
 public class TaxCalculator {
 
@@ -19,18 +18,19 @@ public class TaxCalculator {
 
     private ExchangeRatesSeries exchangeRatesSeries;
 
-    private TaxCalculator(
-        NbpClient nbpClient, Dividend dividend, double taxRateInOriginCountry, double taxRateInPoland
+    private TaxCalculator(NbpClient nbpClient, Dividend dividend, double taxRateInOriginCountry,
+        double taxRateInPoland
     ) {
         this.dividend = dividend;
         this.taxRateInOriginCountry = taxRateInOriginCountry;
         this.taxRateInPoland = taxRateInPoland;
         getExchangeRatesSeries(nbpClient).ifPresent(
-            averageCurrencyRate -> this.exchangeRatesSeries = averageCurrencyRate);
+            averageCurrencyRate -> this.exchangeRatesSeries = averageCurrencyRate
+        );
     }
 
-    public static TaxCalculator of(
-        NbpClient nbpClient, Dividend dividend, double taxRateInOriginCountry, double taxRateInPoland
+    public static TaxCalculator of(NbpClient nbpClient, Dividend dividend, double taxRateInOriginCountry,
+        double taxRateInPoland
     ) {
         return new TaxCalculator(nbpClient, dividend, taxRateInOriginCountry, taxRateInPoland);
     }

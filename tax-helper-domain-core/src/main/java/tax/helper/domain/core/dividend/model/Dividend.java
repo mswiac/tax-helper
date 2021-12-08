@@ -1,11 +1,16 @@
 package tax.helper.domain.core.dividend.model;
 
-import java.time.LocalDate;
-
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import tax.helper.domain.core.common.model.CurrencyAndAmount;
 
-@Data
+import java.time.LocalDate;
+
+@Getter
+@EqualsAndHashCode
+@AllArgsConstructor(staticName = "of")
 public class Dividend {
 
     private String ticker;
@@ -17,3 +22,4 @@ public class Dividend {
     private Dividend() {
     }
 }
+

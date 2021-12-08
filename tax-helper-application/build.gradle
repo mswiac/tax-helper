@@ -1,34 +1,16 @@
-plugins {
-    id 'java'
-    id 'idea'
-}
-
 group = 'mateusz.swiac'
 version = '1.0-SNAPSHOT'
 sourceCompatibility = '11'
-
-repositories {
-    mavenCentral()
-}
+targetCompatibility = '11'
 
 dependencies {
     implementation project(':tax-helper-domain-core')
     implementation project(':tax-helper-domain-application')
     implementation project(':tax-helper-domain-infrastructure')
-
-    compileOnly 'org.projectlombok:lombok:1.18.22'
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
+    
     implementation 'io.springfox:springfox-swagger2:3.0.0'
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
     implementation 'org.springframework.boot:spring-boot-starter-parent:2.5.6'
     implementation 'org.springframework.boot:spring-boot-starter:2.5.6'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.5.6'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
-
-test {
-    useJUnitPlatform()
 }
